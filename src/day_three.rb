@@ -1,28 +1,33 @@
 class ActsAsCsv
-  def read
-    file = File.new("../resources/ElectionData.csv")
-    @headers = file.gets.chomp.split(', ')
 
-    file.each do |row|
-      @result << row.chomp.split(', ')
+  def self.acts_as_csv
+
+    define_method 'read' do
+      file = File.new("../resources/ElectionData.csv")
+      @headers = file.gets.chomp.split(', ')
+
+      file.each do |row|
+        @result << row.chomp.split(', ')
+      end
     end
-  end
 
-  def headers
-    @headers
-  end
+    define_method "headers" do
+      @headers
+    end
 
-  def csv_contents
-    @result
-  end
+    define_method "csv_contents" do
+      @result
+    end
 
-  def initialize
-    @result = []
-    read
+    define_method "initialize" do
+      @result = []
+      read
+    end
   end
 end
 
 class RubyCsv < ActsAsCsv
+  acts_as_csv
 end
 
 m = RubyCsv.new
