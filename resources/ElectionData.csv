@@ -1,5 +1,5 @@
-Presidential,Candidate,Vice Presidential Candidate,Political Party,Popular Vote,Electoral Vote
-Barack H. Obama,Joseph R. Biden, Jr.,Democratic,65,899,583,51.03%,332,61.7%
+PC,VPC,Party,Popular_Vote,Electoral_Vote
+Barack H. Obama,Joseph R. Biden Jr.,Democratic,65,899,583,51.03%,332,61.7%
 Willard Mitt Romney,Paul Ryan,Republican,60,928,966,47.18%,206,38.3%
 Gary Johnson,James P. Gray,Libertarian,1,275,821,0.99%,0,0.0%
 Jill Stein,Cheri Honkala,Green,468,907,0.36%,0,0.0%
