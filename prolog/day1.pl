@@ -31,7 +31,7 @@ acted(andy_serkis, lotr).
 acted(sam_phillips, gladiator).
 
 % Acted with if they were both in the same film 
-one_degree(X, Y) :- \+(X = Y), acted(X, Z), acted(Y, Z).
+one_degree(X, Y) :- acted(X, Z), acted(Y, Z), \+(X = Y).
 
 % Two degrees if they both acted with the same person
-two_degrees(X,Y) :- \+(X = Y), one_degree(X, Z), one_degree(Y, Z).
+two_degrees(X,Y) :- one_degree(X, Z), one_degree(Y, Z), \+(X = Y).
